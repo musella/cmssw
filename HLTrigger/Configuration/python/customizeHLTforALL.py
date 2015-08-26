@@ -16,7 +16,9 @@ def customizeHLTforAll(process, _customInfo = None):
         cmsRunOptions.register('globalTag',_globalTag,cmsRunOptions.multiplicity.singleton,cmsRunOptions.varType.string,"GlobalTag")
         cmsRunOptions.inputFiles = _inputFile
         cmsRunOptions.register('realData',_realData,cmsRunOptions.multiplicity.singleton,cmsRunOptions.varType.bool,"Real Data?")
-
+        cmsRunOptions.register('datasetName',"",cmsRunOptions.multiplicity.singleton,cmsRunOptions.varType.string,"Dataset Name")
+        cmsRunOptions.register('processType',"",cmsRunOptions.multiplicity.singleton,cmsRunOptions.varType.string,"Process Type")
+                
         cmsRunOptions.parseArguments()
 
 # report in log file
